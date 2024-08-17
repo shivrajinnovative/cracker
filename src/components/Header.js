@@ -11,14 +11,14 @@ export default function Header() {
 
 
     useEffect(()=>{
-        // let totalPrice=0
-        // let totalItems=0
-        //     billData?.forEach(element => {
-        //         totalPrice+=element.total
-        //         totalItems+=Number(element.quantity)
-        //     });
-        // setItems(totalItems)
-        // setTotal(totalPrice)
+        let totalPrice=0
+        let totalItems=0
+            billData?.forEach(element => {
+                totalPrice+=element.total
+                totalItems+=Number(element.quantity)
+            });
+        setItems(totalItems)
+        setTotal(totalPrice)
     },[billData])
 
 

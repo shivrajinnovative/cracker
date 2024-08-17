@@ -5,13 +5,13 @@ const billSlice=createSlice({
     reducers:{
         addBill:(state,action)=>{
             let exist=state.find((state)=>state.id===action.payload.id)
-            // if(exist){
-            //     exist.quantity=action.payload.quantity
-            //     exist.total=action.payload.total
+            if(exist){
+                exist.quantity=action.payload.quantity
+                exist.total=action.payload.total
                 
-            // }else{
-            //    state.push(action.payload)
-            // }
+            }else{
+               state.push(action.payload)
+            }
         },
         removeFromBill:(state,action)=>{
             // console.log("remove "+action.payload)
