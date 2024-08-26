@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ProductGroup from './ProductGroup'
 import products from '../data/productData'
 import { useSelector } from 'react-redux'
 import { jsPDF } from 'jspdf';
 import 'jspdf-autotable';
+import Header from './Header';
 
 
 
 export default function ProductList() {
+  const [category,setCategory]=useState(['Single Sound Crackers','Flower Pots','Ground Chakkars','Bijilis','Kids Special','Rockets','Sound Boom','Fancy Night Skyshot','Fancy Fountains','Fancy Musical Series','Electric Crackers',' Wala Crackers','Premium Sparklers','Festival Repeating Shots','Branded Multi Color Shots','Mega Festival Display Setout','Gift Boxes'])
+  
   const billData= useSelector((state)=>state.bill)
   // console.log(billData)
 
@@ -74,7 +77,8 @@ export default function ProductList() {
 
 
   return (
-    <div>
+    <div className='container py-3 py-md-5'>
+        <Header />
       <div className="accordion" id="accordionExample">
         {
           products.map((product, index) => {

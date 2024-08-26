@@ -43,7 +43,7 @@ return (
         <div className='col-4 col-md-2 d-flex px-3 py-2'>
             <input type="text" className='form-control text-center' placeholder='Qty' onChange={(e)=>setQty(Math.floor(e.target.value))} />
         </div>
-        <div className='col-4 col-md-1 px-2 py-2'>
+        <div className='col-4 col-md-1 d-flex px-2 py-2'>
             <input type="text" disabled  className='form-control text-center' value={price} />
         </div>
     </div>
